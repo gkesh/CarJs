@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #ececec;
+
+    main{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -240px;
+        margin-bottom: -160px;
+
+        #canvas{
+            background: url('assets/images/road.png');
+            outline: none;
+            margin: 0 auto;
+        }
+
+        #stats{
+            color: #ffffff;
+            display: block;
+            position: absolute;
+            top: 10px;
+            width: 50px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 25px;
+            background: #000000;
+            padding: 5px;
+            border: #ffffff 2px solid;
+
+            &::before{
+                font-size: 10px;
+                font-weight: lighter;
+                position: absolute;
+                top: 0;
+                left: 15px;
+            }
+
+            &--score{
+                @extend #stats;
+                left: 10px;
+                &::before{
+                    content: 'Score';
+                }
+            }
+
+            &--gear{
+                @extend #stats;
+                right: 10px;
+                &::before{
+                    content: 'Gear';
+                    left: 20px;
+                }
+            }
+        }
+
+        #notice{
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 600;
+            position: absolute;
+            left: -20px;
+            width: auto;
+            display: block;
+            padding: 5px;
+            background: #000000;
+            border: #ffffff 2px solid;
+
+            &--tutorial{
+                @extend #notice;
+                position: fixed;
+                bottom: 10px;
+                left: 10px;
+            }
+
+            &--crash{
+                @extend #notice;
+                top: 150px;
+                &.disable{
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #ececec; }
+  body main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -240px;
+    margin-bottom: -160px; }
+    body main #canvas {
+      background: url("assets/images/road.png");
+      outline: none;
+      margin: 0 auto; }
+    body main #stats, body main #stats--score, body main #stats--gear {
+      color: #ffffff;
+      display: block;
+      position: absolute;
+      top: 10px;
+      width: 50px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 25px;
+      background: #000000;
+      padding: 5px;
+      border: #ffffff 2px solid; }
+      body main #stats::before, body main #stats--score::before, body main #stats--gear::before {
+        font-size: 10px;
+        font-weight: lighter;
+        position: absolute;
+        top: 0;
+        left: 15px; }
+      body main #stats--score {
+        left: 10px; }
+        body main #stats--score::before {
+          content: 'Score'; }
+      body main #stats--gear {
+        right: 10px; }
+        body main #stats--gear::before {
+          content: 'Gear';
+          left: 20px; }
+    body main #notice, body main #notice--tutorial, body main #notice--crash {
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 600;
+      position: absolute;
+      left: -20px;
+      width: auto;
+      display: block;
+      padding: 5px;
+      background: #000000;
+      border: #ffffff 2px solid; }
+      body main #notice--tutorial {
+        position: fixed;
+        bottom: 10px;
+        left: 10px; }
+      body main #notice--crash {
+        top: 150px; }
+        body main #notice--crash.disable {
+          display: none; }
+
+/*# sourceMappingURL=style.css.map */
